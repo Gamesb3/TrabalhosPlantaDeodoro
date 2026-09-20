@@ -1,0 +1,371 @@
+<html>
+  <head>
+    <script>
+      const resp = [
+        // 0. Egipcios
+        [
+          `O povo egípcio habitava o nordeste da África, estabelecido ao longo do fértil vale e do delta do rio Nilo, cercado pelos desertos do Saara e da Arábia.`,
+          
+          `<h3>Os astros mais importantes para os egípcios eram:</h3>
+          <h4>O Sol:</h4> associado a deuses primordiais como Rá, Amon e Hórus.
+          <h4>Sirius:</h4> chamada de Sopdet ou Sótis.
+          <h4>A Lua:</h4> vinculada aos deuses Thot e Khonsu.
+          <h4>A constelação de Órion:</h4> associada a Osíris.`,
+          
+          `Observavam o céu por meio de instrumentos simples, como o <a href="https://www.google.com/search?q=o+que+e+merkhet" target="_blank">merkhet</a> e o <a href="https://www.google.com/search?q=fio+de+prumo" target="_blank">fio de prumo</a>. Observavam o <a href="https://www.google.com/search?q=o+que+e+orto" target="_blank">orto</a> helíaco de Sirius e identificavam <a href="https://www.google.com/search?q=o+que+e+decanos+no+egito" target="_blank">decanos</a>.`,
+          
+          `Sim, eles possuíam um calendário muito semelhante ao nosso. O ano deles durava 365 dias, dividido em 12 meses de 30 dias, mais 5 dias adicionais chamados de epagômenos. Esse calendário organizava-se em três grandes estações ligadas ao Nilo: Akhet (inundação), Peret (semeadura) e Shemu (colheita).`,
+          
+          `<h3>Existiam numerosos mitos celestes. Um dos mais relevantes é a história da viagem noturna do deus Rá:</h3>
+          Segundo a mitologia egípcia, todas as noites o deus do Sol, Rá, viajava em sua barca sagrada (Mesektet) pelo submundo (Duat). Durante esse percurso, ele precisava enfrentar a serpente do caos, Apep (Apófis), que tentava engolir a barca para impedir o amanhecer. Graças ao apoio de outros deuses, como Seth, Rá vencia a criatura todas as noites, permitindo que o Sol renascesse na aurora (Khepri) e garantindo, assim, a ordem cósmica (Ma'at) e a continuidade da vida.`,
+          
+          `<h3>A observação dos astros orientava diretamente as atividades cotidianas e institucionais:</h3>
+          <h4>Agricultura:</h4> O reaparecimento de Sirius indicava a chegada iminente da cheia do Nilo, o que permitia preparar os campos para o ciclo agrícola. 
+          <h4>Orientação e Construção:</h4> Utilizavam a posição das estrelas circumpolares para orientar os quatro lados das pirâmides e templos em direção aos pontos cardeais com precisão. 
+          <h4>Medição do Tempo:</h4> Organizavam as jornadas de trabalho e os rituais mediante o acompanhamento das horas noturnas e de hidrômetros ou relógios de sol (gnômons) durante o dia.`,
+
+          `Para a cultura egípcia, o céu não era apenas um espaço físico, mas a morada divina e a manifestação da ordem cósmica (Ma'at). Acreditava-se que o cosmos funcionava sob um ciclo eterno de morte e renascimento, refletido na jornada diária do Sol e nas estações do ano.`
+        ],
+        
+        // 1. Griegos
+        [
+          `Habitaram o sul da Península Balcânica, as ilhas dos mares Egeu e Jônico e as costas da Ásia Menor (na atual Turquia). Devido à sua geografia montanhosa e marítima, expandiram-se posteriormente, fundando colônias por todo o Mediterrâneo (incluindo o sul da Itália e a Sicília, região conhecida como Magna Grécia).`,
+          
+          `<h3>Os astros mais importantes para os gregos eram:</h3>
+          <h4>O Sol:</h4> (Hélio / Apolo) Representava a luz solar, o calor e a passagem do tempo. 
+          <h4>A Lua:</h4> (Selene / Ártemis) Ligada aos ciclos mensais, às culturas agrícolas e à noite.
+          <h4>Constelações-chave:</h4> As Plêiades, as Híades, Órion e a Ursa Maior (utilizadas como guia de navegação e marcadores das estações). 
+          <h4>Os planetas visíveis:</h4> Chamados de *planētes* ("estrelas errantes"), associados aos seus deuses: Afrodite (Vênus), Ares (Marte), Zeus (Júpiter), Cronos (Saturno) e Hermes (Mercúrio).`,
+          
+          `Utilizavam instrumentos astronômicos inovadores para a época, como o <a href="https://www.google.com/search?q=o+que+e+astroábio" target="_blank">astroábio</a>, a esfera <a href="https://www.google.com/search?q=o+que+e+armilar" target="_blank">armilar</a> e o <a href="https://www.google.com/search?q=o+que+e+gnomon" target="_blank">gnomon</a>. Além disso, criaram modelos matemáticos para prever eclipses e catalogar estrelas.`,
+          
+          `Sim, utilizavam calendários lunissolares, compostos por 12 meses lunares (alternando entre 29 e 30 dias) com meses intercalares adicionados periodicamente para alinhar o calendário ao ano solar de 365 dias.`,
+          
+          `<h3>O Mito de Fáeton e o Carro do Sol:</h3>
+          Fáeton, filho de Hélio (o deus Sol), pediu ao pai permissão para guiar a carruagem solar por um dia. Incapaz de controlar os cavalos alados, Fáeton aproximou-se demais da Terra, queimando florestas e criando desertos. Para evitar a destruição do mundo, Zeus interveio com um raio.`,
+          
+          `<h3>Atividades cotidianas e navegação:</h3>
+          <h4>Navegação:</h4> A Ursa Maior e a Ursa Menor orientavam os marinheiros no Mar Mediterrâneo durante a noite.
+          <h4>Agricultura:</h4> O nascimento e o ocaso de constelações como as Plêiades marcavam o momento exato do plantio e da colheita.`,
+          
+          `Para os gregos, o céu era tanto a morada dos deuses olímpicos quanto um grande enigma geométrico que podia ser compreendido por meio da razão, da matemática e da filosofia.`
+        ],
+
+        // 2. Mesopotámicos
+        [
+          `Habitavam a região da Mesopotâmia ("terra entre rios"), localizada no Oriente Médio, entre os rios Tigre e Eufrates (território do atual Iraque e partes da Síria e Turquia).`,
+          
+          `<h3>Os astros mais importantes para os mesopotâmicos eram:</h3>
+          <h4>O Sol (Shamash):</h4> Deus da justiça e da luz.
+          <h4>A Lua (Sin / Nanna):</h4> Divindade principal do tempo e dos meses.
+          <h4>Vênus (Ishtar):</h4> Deusa do amor e da guerra, identificada como a estrela da manhã e da tarde.
+          <h4>Constelações do Zodíaco:</h4> Foram os primeiros a mapear o zodíaco.`,
+          
+          `Construíam altas torres chamadas Ziogurates como observatórios astronômicos. Registravam o movimento dos astros em tábuas de argila em escrita cuneiforme com extrema precisão matemática.`,
+          
+          `Sim, criaram um calendário lunissolar composto por 12 meses lunares de 29 ou 30 dias (totalizando 354 dias). Adicionavam um 13º mês periodicamente para corrigir a diferença com o ano solar.`,
+          
+          `<h3>O Enuma Elish (Mito da Criação):</h3>
+          O deus Marduk derrota Tiamat (o caos) e organiza o cosmos. Com o corpo de Tiamat, cria o céu e a terra, estabelecendo a morada dos grandes deuses e definindo as constelações e a trajetória da Lua para marcar os dias e meses.`,
+          
+          `<h3>Previsão e organização:</h3>
+          <h4>Agricultura:</h4> Controlavam os períodos de plantio e as cheias imprevisíveis dos rios Tigre e Eufrates.
+          <h4>Astrologia e Política:</h4> Acreditavam que os astros enviavam presságios reais; eclipses e posições planetárias eram interpretados para tomar decisões políticas e de guerra.`,
+          
+          `O céu era visto como o grande livro dos deuses, onde o destino dos homens e dos reinos estava escrito e podia ser lido através da observação minuciosa das estrelas.`
+        ],
+
+        // 3. Chinos
+        [
+          `Habitavam o leste da Ásia, concentrados principalmente ao longo das bacias do Rio Amarelo (Huang He) e do Rio Yangtzé.`,
+          
+          `<h3>Os astros mais importantes para os chineses eram:</h3>
+          <h4>A Estrela Polar (Ziwei):</h4> Centro do céu, associada ao Imperador.
+          <h4>O Sol e a Lua:</h4> Representações supremas do Yin e Yang.
+          <h4>Os Cinco Planetas Visíveis:</h4> Associados aos cinco elementos (Madeira/Júpiter, Fogo/Marte, Terra/Saturno, Metal/Vênus, Água/Mercúrio).`,
+          
+          `Usavam esferas armilares, relógios de água (clepsidras) e gnomons. Mantinham observatórios imperiais dedicados a registrar supernovas, cometas e eclipses com detalhes minuciosos.`,
+          
+          `Sim, desenvolveram o calendário tradicional chinês (lunissolar). O ano possui 12 ou 13 meses lunares e é estruturado em ciclos de 60 anos, combinando os elementos com os 12 animais do zodíaco chinês.`,
+          
+          `<h3>O Mito da Lenda de Hou Yi e os Dez Sós:</h3>
+          Antigamente, dez sóis surgiam um por dia. Um dia, todos saíram juntos, queimando a Terra. O arqueiro celestial Hou Yi usou seu arco para derrubar nove sóis, deixando apenas um para iluminar o mundo de forma equilibrada.`,
+          
+          `<h3>Governo e Agricultura:</h3>
+          <h4>Agricultura:</h4> Dividiam o ano em 24 termos solares para orientar com precisão o plantio e a colheita.
+          <h4>Legitimidade Imperial:</h4> O imperador era o "Filho do Céu" e devia manter o Mandato do Céu através do calendário preciso.`,
+          
+          `O céu (Tian) era a ordem suprema e moral que mantinha a harmonia entre a natureza, a sociedade e o indivíduo. Qualquer anomalia celeste refletia desequilíbrio na Terra.`
+        ],
+
+        // 4. Mayas
+        [
+          `Habitavam a região da Mesoamérica, cobrindo o sul do México, Guatemala, Belize e partes de Honduras e El Salvador.`,
+          
+          `<h3>Os astros mais importantes para os maias eram:</h3>
+          <h4>Vênus (Kukulkán / Chak Ek'):</h4> O astro mais estudado por eles, associado à guerra e aos ciclos de renovação.
+          <h4>O Sol (Kinich Ahau):</h4> Fonte de vida e luz.
+          <h4>A Lua (Ix Chel):</h4> Associada à fertilidade, gravidez e aos ciclos aquáticos.
+          <h4>A Via Láctea:</h4> Vista como uma grande árvore sagrada ou a estrada para o submundo (Xibalbá).`,
+          
+          `Construíam templos e pirâmides alinhados milimetricamente com os pontos cardeais e eventos astronômicos (como o observatório El Caracol em Chichén Itzá), sem o uso de instrumentos ópticos.`,
+          
+          `Sim, possuíam um sistema de calendários altamente avançado e interligado: o *Tzolkin* (sagrado, de 260 dias), o *Haab'* (solar, de 365 dias) e a *Contagem Longa* para registrar grandes eras históricas.`,
+          
+          `<h3>O Popol Vuh e os Gêmeos Heróis:</h3>
+          Os irmãos gêmeos Hunahpú e Ixbalanqué descem ao submundo (Xibalbá) para derrotar os senhores da morte através de jogos de bola. Após a vitória, sobem ao céu para se transformarem no Sol e na Lua.`,
+          
+          `<h3>Rituais e Agricultura:</h3>
+          <h4>Agricultura:</h4> O calendário solar indicava o momento exato do corte e queimada da vegetação e o início do plantio do milho.
+          <h4>Guerra e Rituais:</h4> O movimento de Vênus definia as datas propícias para coroações de reis e expedições militares.`,
+          
+          `Para os maias, o céu era um mapa vivo do tempo sagrado. Os astros eram divindades cujos ciclos contínuos regulavam a existência do universo e da humanidade.`
+        ],
+
+        // 5. Pueblos Indígenas del Brasil
+        [
+          `Habitavam (e habitam) o vasto território que hoje compreende o Brasil, ocupando biomas como a Amazônia, a Mata Atlântica, o Cerrado e o Pantanal (como os Tupi-Guarani, Guarani-Kaiowá, Yanomami, entre outros).`,
+          
+          `<h3>Os astros e aglomerados mais importantes eram:</h3>
+          <h4>Constelação da Ema (Guyra Nhandu):</h4> Uma das mais importantes constelações do hemisfério sul.
+          <h4>Constelação do Homem Velho (Tuja):</h4> Indica a transição das estações.
+          <h4>As Plêiades (Eichu):</h4> Marcadoras do início do ano novo e do ciclo das chuvas.
+          <h4>O Sol (Kuaray) e a Lua (Jasy):</h4> Divindades centrais na cosmologia tupi-guarani.`,
+          
+          `Observavam o céu a olho nu a partir do horizonte local, utilizando elementos da paisagem (como montanhas ou árvores) e estacas fincadas no chão como gnomons naturais para projetar sombras.`,
+          
+          `Sim, utilizavam calendários baseados na observação das constelações e das fases da Lua, combinados com os ciclos climáticos locais (período de chuvas e de seca) e o comportamento dos animais e plantas.`,
+          
+          `<h3>O Mito de Jasy e Kuaray (Lua e Sol):</h3>
+          Segundo a tradição Tupi-Guarani, Kuaray (o Sol) e Jasy (a Lua) são irmãos criados por Nhanderu (o deus supremo). Jasy tenta imitar a luz e o brilho do irmão, mas Kuaray é mais forte, gerando a alternância perfeita entre o dia e a noite.`,
+          
+          `<h3>Subsistência cotidiana:</h3>
+          <h4>Agricultura e Pesca:</h4> O surgimento da constelação da Ema indica o início da seca e a época ideal para a pesca; a aparição das Plêiades sinaliza o tempo de plantar mandioca e milho.
+          <h4>Coleta:</h4> As fases lunares determinavam o melhor momento para colher frutos e retirar madeira da mata sem que apodrecesse.`,
+          
+          `Para os povos indígenas do Brasil, o céu e a Terra estão profundamente interconectados. As estrelas não representam apenas pontos distantes, mas o espelho da vida na floresta e o espírito dos ancestrais.`
+        ]
+      ];
+    </script>
+    <style>
+      body {
+        background: #0D1117;
+        color: #f9fcfff3; 
+        height: 100vh;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        box-sizing: border-box;
+        user-select: none;
+        font-family: sans-serif;
+      }
+      h1 {
+        text-align: center; 
+        color: #fff;
+      }
+      span {
+        background: #34495b;
+        padding: 10px;
+        display: inline-block;
+        margin-bottom: 5px;
+        border-radius: 25%;
+        transition: 0.1s ease-in-out;
+      }
+      
+      #povos {
+        display: flex;
+        gap: 5px;
+        overflow-x: auto;
+      }
+      .povos {
+        background: #171B22;
+        color: #6E7681;
+        min-width: max-content;
+        text-align: center; 
+        padding: 15px;
+        flex: 1;
+        border-radius: 50px;
+        transition: 0.2s ease-in-out;
+      }
+      .povoSelect {
+        background: #005977;
+        color: #fff;
+        flex: 1.5;
+      }
+
+      #preguntas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+        overflow-y: auto;
+      }
+      .pregunta {
+        background: #23272A;
+        padding: 25px;
+        border-radius: 25px;
+        transition: 0.2s ease-in-out;
+      }
+      .preguntaActive {
+        background: #073558;
+      }
+      .preguntaActive span {
+        background: #3b82b9;
+      }
+      .respuesta {
+        background: #0003;
+        height: 0px;
+        padding: 0px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+        user-select: auto
+      }
+      .respuesta h3 {
+        margin: 0 0 15px 0;
+      }
+      .respuesta h4 {
+        margin: 10px 0 0 0;
+      }
+      .preguntaActive .respuesta {
+        padding: 10px;
+        height: 175px;
+        overflow-y: auto;
+      }
+      ::selection {
+        background: #07f5;
+        color: #ffffff;
+      }
+      a:link {
+        color: #00bcff;
+      }
+      a:visited {
+        color: #00bcff;
+      }
+      a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      
+      .sun {
+        fill: #ffcc00;
+        filter: drop-shadow(0 0 12px #ff9900);
+      }    
+      .orbit {
+        fill: none;
+        stroke: rgba(255, 255, 255, 0.2);
+        stroke-width: 1px;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .orbit-mercury { animation: spin 4s linear infinite; }
+      .orbit-venus   { animation: spin 7s linear infinite; }
+      .orbit-earth   { animation: spin 10s linear infinite; }
+      .orbit-mars    { animation: spin 14s linear infinite; }
+      .orbit-jupiter { animation: spin 22s linear infinite; }
+      .orbit-saturn  { animation: spin 30s linear infinite; }
+      .orbit-uranus  { animation: spin 40s linear infinite; }
+      .orbit-neptune { animation: spin 50s linear infinite; }
+    </style>
+  </head>
+  <body>
+    <h1>Trabalho de Ciencias</h1>
+    
+    <h3><span>1.</span> escolha um povo e veja as preguntas e respostas</h3>
+    
+    <div id="povos" onclick="povos(event.target.closest('.povos'))">
+      <div class="povos" id="0a">Egipsios</div>
+      <div class="povos" id="1a">Gregos</div>
+      <div class="povos" id="2a">Mesopotamios</div>
+      <div class="povos" id="3a">Chineses</div>
+      <div class="povos" id="4a">Maias</div>
+      <div class="povos" id="5a">Povos Indigenas do Brasil</div>
+      <script>
+        function povos(e) {
+        if (!e) return;
+        document.querySelectorAll(".povos").forEach(el => {
+          el.classList.remove("povoSelect");
+        });
+        document.querySelectorAll(".pregunta").forEach(el => {
+          el.classList.remove("preguntaActive");
+        });
+        e.classList.add("povoSelect");
+      }
+        window.addEventListener('load', () => {
+          document.getElementById("0a").classList.add("povoSelect");
+        });
+      </script>
+    </div>
+    
+    <div id="preguntas" onclick="preguntaFocus(event.target.closest('.pregunta'))">
+      <div class="pregunta" id="0b">
+        <h3><span>a.</span> onde esse povo vivia?</h3>
+        <div class="respuesta">houve um erro. por favor tente de novo</div>
+      </div>
+      <div class="pregunta" id="1b">
+        <h3><span>b.</span> quais astros eram importantes para eles?</h3>
+        <div class="respuesta">houve um erro. por favor tente de novo</div>
+      </div>
+      <div class="pregunta" id="2b">
+        <h3><span>c.</span> como esse povo utlilizava a obsevação do cêu?</h3>
+        <div class="respuesta">houve um erro. por favor tente de novo</div>
+      </div>
+      <div class="pregunta" id="3b">
+        <h3><span>d.</span> esse povo possuia algun tipo de calendario relacionado aos anos?</h3>
+        <div class="respuesta">houve um erro. por favor tente de novo</div>
+      </div>
+      <div class="pregunta" id="4b">
+        <h3><span>e.</span> existia historias, mitos ou lendas relacionados ao céu? conte uma:</h3>
+        <div class="respuesta">houve um erro. por favor tente de novo</div>
+      </div>
+      <div class="pregunta" id="5b">
+        <h3><span>f.</span> como a observação dos astros ajuda nas atividades do cotidiano desse povo?</h3>
+        <div class="respuesta">houve um erro. por favor tente de novo</div>
+      </div>
+      <div class="pregunta" id="6b">
+        <h3><span>g.</span> explique a importancia do céu para diferentes culturas?</h3>
+        <div class="respuesta">houve um erro. por favor tente de novo</div>
+      </div>
+      <div class="pregunta" id="7b">
+        <h3><span>h.</span> desenhe o nosso sistema solar:</h3>
+        <div class="respuesta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 -250 500 500" width="100%" height="100%">
+
+            <!-- Sol -->
+  <circle class="sun" cx="0" cy="0" r="16" />
+
+  <!-- 1. Mercurio -->
+  <circle class="orbit" cx="0" cy="0" r="30" />
+  <g class="orbit-mercury">
+    <circle cx="30" cy="0" r="3" fill="#a6a6a6" />
+  </g>
+
+  <!-- 2. Venus -->
+  <circle class="orbit" cx="0" cy="0" r="50" />
+  <g class="orbit-venus">
+    <circle cx="50" cy="0" r="4.5" fill="#e3bb76" />
+  </g>
+
+  <!-- 3. Tierra -->
+  <circle class="orbit" cx="0" cy="0" r="75" />
+  <g class="orbit-earth">
+    <circle cx="75" cy="0" r="5" fill="#4b9cd3" />
+  </g>
+
+  <!-- 4. Marte -->
+  <circle class="orbit" cx="0" cy="0" r="100" />
+  <g class="orbit-mars">
+    <circle cx="100" cy="0" r="4" fill="#c1440e" />
+  </g>
+
+  <!-- 5. Júpiter -->
+  <circle class="orbit" cx="0" cy="0" r="135" />
+  <g class="orbit-jupiter">
+    <circle cx="135" cy="0" r="10" fill="#b07f35" />
+  </g>
+
+  <!-- 6. Saturno -->
+  <circlehttps://www.google.com/search?q=o+que+e+merkhet
