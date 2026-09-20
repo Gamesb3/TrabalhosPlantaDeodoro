@@ -368,4 +368,41 @@
   </g>
 
   <!-- 6. Saturno -->
-  <circlehttps://www.google.com/search?q=o+que+e+merkhet
+  <circle class="orbit" cx="0" cy="0" r="170" />
+  <g class="orbit-saturn">
+    <!-- Anillo de Saturno -->
+    <ellipse cx="170" cy="0" rx="12" ry="4" fill="none" stroke="#e2bf7d" stroke-width="1.5" opacity="0.8" />
+    <!-- Planeta Saturno -->
+    <circle cx="170" cy="0" r="7.5" fill="#e2bf7d" />
+  </g>
+
+  <!-- 7. Urano -->
+  <circle class="orbit" cx="0" cy="0" r="200" />
+  <g class="orbit-uranus">
+    <circle cx="200" cy="0" r="6" fill="#4b70dd" />
+  </g>
+
+  <!-- 8. Neptuno -->
+  <circle class="orbit" cx="0" cy="0" r="230" />
+  <g class="orbit-neptune">
+    <circle cx="230" cy="0" r="5.5" fill="#274687" />
+  </g>
+</svg>
+
+        </div>
+      </div>    
+      <script>
+      function preguntaFocus(e) {
+        if (!e) return;
+        document.querySelectorAll(".pregunta").forEach(el => {
+          el.classList.remove("preguntaActive");
+        });
+        e.classList.add("preguntaActive");
+        if (document.querySelector(".preguntaActive").id !== "7b") {
+          document.querySelectorAll(".respuesta")[document.querySelector(".preguntaActive").id[0]].innerHTML = resp[document.querySelector(".povoSelect").id[0]][document.querySelector(".preguntaActive").id[0]];
+        }
+      }
+    </script>
+    </div>
+  </body>
+</html>
