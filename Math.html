@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="PT">
+  
+<style>
+html {
+  height: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+body {
+  background: #1C3352;
+  
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  box-sizing: border-box;
+  
+  color: #fff;
+  font-family: Orbitron;
+  text-align: center;
+}
+
+#inicio {
+  width: 100%; 
+  max-width: 750px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+  text-align: center;
+  font-family: Orbitron;
+}
+#inicio input {
+  background: #00202faa;
+  
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box; 
+  
+  border: none;
+  border-radius: 25px 25px 0 0;
+  outline: none;
+  
+  color: #fff;
+  font-family: inherit;
+  font-size: 24px;
+  text-align: center;
+}
+#inicio button {
+  background: #5ccbffaa;
+  
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  
+  border: none;
+  border-radius: 0 0 25px 25px;
+  outline: none;
+  
+  color: #fff;
+  font-family: inherit;
+  font-size: 20px;
+  
+  transition: background 0.2s ease-in-out;
+}
+#inicio button:active {
+  background: #61cdff;
+}
+#inicio p {
+  margin-bottom: 15vh;
+}
+  
+#preguntas {
+  display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#barraSuperior {
+  display: flex;
+    gap: 40px;
+  position: fixed;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+}
+  
+.progress {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), #fff2); 
+  
+  height: 40px; 
+  padding: 4px; 
+  box-sizing: border-box;
+  flex: 1;
+  
+  border-radius: 100vh;
+}
+.progress div {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); 
+  position: relative;
+  width: 0%;
+  height: 100%;
+  border-radius: 100vh; 
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.progress div span {
+  background: #1e40af; 
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 36px; 
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 50%;
+  outline: 2px solid #60a5fa;
+  user-select: none;
+  font-family: Orbitron;
+}
+.pulse {
+  animation: pulse-animation 0.5s ease-out;
+}
+@keyframes pulse-animation {
+  0% {
+    outline: 2px #60a5fa solid;
+  }
+  50% {
+    outline: 15px #60a5fa solid;
+  }
+  90% {
+    outline: 15px rgba(96, 165, 250, 0) solid;
+  }
+  100% {
+    outline: 2px rgba(96, 165, 250, 0) solid;
+  }
+}
+
+#vidas {
+  color: #f00f;
+  display: flex;
+}
+  
+@keyframes rustic {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(10px); }
+  50% { transform: translateX(-5px); }
+  70% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+.rustic {
+  animation: rustic 0.3s steps(5) forwards;
+}
+
+
+math {
+  background: #1234;
+
+  padding: 25px;
+  overflow: none;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  position: fixed;
+    top: 150px;
+    bottom: 150px;
+    left: 50px;
+    right: 50px;
+
+  border-radius: 25px;
+
+  font-family: Orbitron;
+  font-size: 20px;
+}
+math input {
+  background-color: #0b172a;
+
+  width: 100px;
+  padding: 10px;  
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 20px;
+}
+math select {
+  background-color: #0b172a;
+
+  width:  55px;
+  height: 45px;
+  padding: 10px;
+  
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  
+  color: #fff;
+  font-size: 20px;
+}
+  
+#preguntas button {
+  background: #5ccbffaa;
+
+  width: calc(100% - 100px);
+  max-width: 200px;
+  padding: 10px;
+  position: fixed;
+    bottom: 50px;
+      
+  border: none;
+  border-radius: 25px;
+      
+  color: #fff;
+  font-family: inherit;
+  font-size: 20px;
+      
+  transition: 0.2s ease-in-out;
+}
+button:active {
+  filter: brightness(1.25);
+}
+math mi {
+  font-size: 20px;
+  margin: 20px;
+}
+</style>
+
+<head>
+  
+  <meta charset="UTF-8">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+
+<div id="inicio">
+  <h1>Escolha um nome</h1>
+  <input maxlength="25" value="a">
+  <button onclick="iniciar()">INICIAR</button>
+  <p></p>
+</div>
+
+<div id="preguntas">
+  <div id="barraSuperior">
+  <div class="progress">
+    <div><span>0</span></div>
+  </div>
+  
+  <div id="vidas">
+    
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    
+  </div>
+  </div>
+  
+  <math></math>
+
+  <button>ENVIAR</button>
+  
+</div>
+
+</body>
+
+<script>
+  var vidas = document.getElementById("vidas").childElementCount;
+  document.onfullscreenchange = function() {
+    if (document.fullscreenElement === null) {
+      document.body.innerHTML = "<h1>¡você esta descalificado!</h1>"
+    }
+  }
+  
+  document.querySelector('#inicio input').addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z0-9 áéíóúÁÉÍÓÚñÑçÇ]/g, '');
+  });
+  function iniciar() {
+    if (document.querySelector("#inicio input").value.length > 0) {
+      document.documentElement.requestFullscreen();
+      document.getElementById("inicio").style.display = "none";
+      document.getElementById("preguntas").style.display = "flex"
+      if (Math.random() > 0.3) {
+        porsentage()
+      } else if (Math.random() > 0.5) {
+        interes()
+      } else {
+        acrDecPorc()
+      }
+    }
+  }
+  
+  function changeProgress(a) {
+    if (a <= 10) {
+      document.querySelector('.progress div span').innerText = a;
+      document.querySelector('.progress div').style.width = a + "0%"; 
+      document.querySelector(".progress div").ontransitionend = function(e) {
+        if (e.propertyName === "width") {
+          document.querySelector(".progress div span").classList.remove("pulse");
+          void document.querySelector("span").offsetWidth;
+          document.querySelector(".progress div span").classList.add("pulse");
+        }
+      }
+    } else {
+      document.onfullscreenchange = "";
+      document.body.innerHTML = "<h1>¡PARABENS! você ganhou</h1>"
+    }
+  }
+
+  let value;
+  function frac(formFrac, element) {
+    if (formFrac == 0) {
+      return (`
+        <mfrac>
+          <mi>${element == "input"? "<input type='number'>" : element}</mi>
+          <mi>100</mi>
+        </mfrac>`)
+    } else if (formFrac == 1) {
+      return (`
+        <mrow>
+          ${element == "input"? 
+            "<mtext><input style='margin-right: 10px;' type='number'></mtext>" : 
+            `<mi>${element}</mi>`}
+          <mo>%</mo>
+        </mrow>`)
+    } else {
+      return (`
+        <mi>${element == "input"? "<input type='number'>" : element/100}</mi>`)
+    }
+  }
+  function porsentage() {
+    value = Math.floor(Math.random()*101);
+    let input = Math.random() > 0.5;
+    let form = [Math.floor(Math.random()*3), undefined]
+    do {
+      form[1] = Math.floor(Math.random()*3)
+    } while (form[0] == form[1]);
+    document.querySelector("math").innerHTML = frac(form[0], input ? "input" : value) + "<mo>=</mo>" + frac(form[1], !input ? "input" : value)
+    if ((form[0] == 2 && input) || (form[1] == 2 && !input)) {
+      value /= 100;
+    } 
+    document.querySelector("#preguntas button").onclick = function() {
+    if (value == document.querySelector("math input").value) {
+      changeProgress(Number(document.querySelector('.progress div span').innerText) + 1)
+      if (Math.random() > 0.5) {
+        acrDecPorc()
+      } else {
+        interes()
+      }
+    } else {
+      vida(value);
+    }
+  }
+  }
+
+  function interes() {
+    let input = Math.floor(Math.random() * 3);
+
+    let C = Math.floor(Math.random() * 50) + 1;
+    let t = Math.floor(Math.random() * 10) + 1;
+    
+    let porcentaje = Math.floor(Math.random() * 10) * 10;
+    if (porcentaje === 0) porcentaje = 10;
+
+    let I = (C * porcentaje * t) / 100;
+
+    value = [I, C, porcentaje, t];
+
+    document.querySelector("math").innerHTML = `
+      <mi>${value[0]}</mi>
+      <mo>=</mo>
+      <mi>${input == 0 ? "<input type='number'>" : value[1]}</mi>
+      <mo>×</mo>
+      ${frac(
+        Math.floor(Math.random() * 2), 
+        input == 1 ? "input" : value[2])}
+      <mo>×</mo>
+      <mi>${input == 2 ? "<input type='number'>" : value[3]}</mi>`;
+
+    document.querySelector("#preguntas button").onclick = function() {
+      if (value[input+1] == document.querySelector("math input").value) {
+        changeProgress(Number(document.querySelector('.progress div span').innerText) + 1)
+        if (Math.random() > 0.5) {
+          acrDecPorc()
+        } else {
+          porsentage()
+        }
+      } else {
+        vida(value[input+1])
+      }
+    }
+  }
+
+    function acrDecPorc() {
+    let base = (Math.floor(Math.random() * 10) + 1) * 100;
+    let esAumento = Math.random() < 0.5;
+    let porcentaje = (Math.floor(Math.random() * 9) + 1) * 5; 
+
+    let calculo = base * (1 + (esAumento ? (porcentaje / 100) : -(porcentaje / 100)));
+    let resultadoExacto = parseFloat(calculo.toFixed(2));
+
+    value = [resultadoExacto, base, porcentaje, esAumento];
+
+    let input = Math.floor(Math.random() * 3);
+
+    document.querySelector("math").innerHTML = `
+      <mrow>
+        <mi>${input == 0 ? "<input type='number'>" : value[0]}</mi>
+        <mo>=</mo>
+        <mi>${input == 1 ? "<input type='number'>" : value[1]}</mi>
+        <mo>(</mo>
+        <mn>1</mn>
+        <mo>${value[3] ? "+" : "-"}</mo>
+        ${frac(Math.floor(Math.random() * 3), input == 2 ? "input" : value[2])}
+        <mo>)</mo>
+      </mrow>
+    `;
+
+    document.querySelector("#preguntas button").onclick = function() {
+      if (Number(document.querySelector("math input").value) === value[input]) {
+        changeProgress(Number(document.querySelector('.progress div span').innerText) + 1);
+        if (Math.random() > 0.5) {
+          porsentage();
+        } else {
+          interes();
+        }
+      } else {
+        vida(value[input]);
+      }
+    }
+  }
+
+  
+  function vida(a) {
+      vidas--;
+      document.querySelectorAll("#vidas svg").forEach((element, index) => {
+        if (index >= vidas) {
+          element.style.color = "#000a"; 
+          element.classList.add("rustic");
+        }
+      })
+      if (vidas <= 0) {
+        document.onfullscreenchange = "";
+        document.body.innerHTML = "<h1>¡Você Perdeu!</h1>";
+  }
+  }
+</script>
+
+</html>
